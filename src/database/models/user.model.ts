@@ -28,7 +28,7 @@ class User extends Model{ //class User inherits from Sequelize's Model class to 
     @Column({          //decorator to create a column
         type:DataType.STRING
     })
-    declare userName:string //name of column:userName
+    declare username:string //name of column:userName
 
 
 
@@ -41,7 +41,8 @@ class User extends Model{ //class User inherits from Sequelize's Model class to 
 
     
     @Column({
-        type:DataType.STRING
+        type:DataType.STRING,
+        unique:true
         
     })
     declare email:string    //name of column:email
