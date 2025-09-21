@@ -56,6 +56,20 @@ class User extends Model{ //class User inherits from Sequelize's Model class to 
         defaultValue: 'student',
     })
     declare role:string
+
+
+    /* 
+
+    in multitenant arch, a user can create multiple institutes
+    so we need to add the institute number to the user table
+    which institute is currently active
+
+    */
+   @Column({
+    type:DataType.STRING
+   })
+   declare currentInstituteNumber:string
+
 }
 
 export default User  //export the class
