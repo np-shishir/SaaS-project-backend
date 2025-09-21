@@ -41,7 +41,7 @@ class User extends Model{ //class User inherits from Sequelize's Model class to 
 
     
     @Column({
-        type:DataType.STRING,
+        type:DataType.STRING, 
         unique:true
         
     })
